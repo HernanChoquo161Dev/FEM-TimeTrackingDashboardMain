@@ -1,0 +1,33 @@
+/*variables*/
+:root {
+  --color-blue: hsl(246, 80%, 60%);
+  --color-orange: hsl(15, 100%, 70%);
+  --color-light-blue: hsl(195, 74%, 62%);
+  --color-red: hsl(348, 100%, 68%);
+  --color-green: hsl(145, 58%, 55%);
+  --color-violet: hsl(264, 64%, 52%);
+  --color-yellow: hsl(43, 84%, 65%);
+
+  --color-very-dark-blue: hsl(226, 43%, 10%);
+  --color-dark-blue: hsl(235, 46%, 20%);
+  --color-desaturated-blue: hsl(235, 45%, 61%);
+  --color-pale-blue: hsl(236, 100%, 87%);
+}
+/*normalize*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*root*/
+html {
+  font-size: 62.5%;
+}
+/*container page*/
+body {
+  min-height: 100vh;
+
+  font-family: "Rubik", sans-serif;
+}

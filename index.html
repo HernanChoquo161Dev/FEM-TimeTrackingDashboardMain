@@ -8,13 +8,44 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
+  <main class="main-class">
+    <div class="tracking-dashboard">
+      <div class="tracking-dashboard__usuario-box">
+        <div class="tracking-dashboard__image-box">
+          <img src="" alt="" class="tracking-dashboard__image">
+        </div>
+        <span class="tracking-dashboard__text"></span>
+        <h1 class="tracking-dashboard__name"></h1>
+        <div class="time-change">
+          <ul class="time-change__list">
+            <li class="time-change__option"></li>
+            <li class="time-change__option"></li>
+            <li class="time-change__option"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="time-tracking">
+        <div class="time-cell">
+          <div class="time-cell__content">
+            <div class="cell-theme">
+              <h2 class="cell-theme__text"></h2>
+              <button class="cell-theme__change"></button>
+            </div>
+            <h1 class="time-cell__time"></h1>
+            <p class="time-cell__text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   Report for
   Jeremy Robson
@@ -71,10 +102,7 @@
   7hrs <!-- monthly -->
   Previous - 11hrs <!-- monthly -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script type="text/javascript" src="./json/data.json"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
