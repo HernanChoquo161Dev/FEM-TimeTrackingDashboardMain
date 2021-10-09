@@ -12,6 +12,8 @@
   --color-dark-blue: hsl(235, 46%, 20%);
   --color-desaturated-blue: hsl(235, 45%, 61%);
   --color-pale-blue: hsl(236, 100%, 87%);
+
+  --color-dark-blue-opacity: hsl(236, 41%, 34%);
 }
 /*normalize*/
 *,
@@ -29,5 +31,185 @@ html {
 body {
   min-height: 100vh;
 
+  background-color: var(--color-very-dark-blue);
+
+  color: #ffffff;
   font-family: "Rubik", sans-serif;
+}
+/*main page*/
+.main-page {
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+}
+/*component*/
+.tracking-dashboard {
+  display: flex;
+  justify-content: center;
+}
+/*usuario section*/
+.tracking-dashboard__user-box {
+  background-color: var(--color-dark-blue);
+
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 200px;
+
+  margin-right: 2rem;
+
+  border-radius: 2rem;
+}
+/*info user block*/
+.info-user {
+  background-color: var(--color-blue);
+
+  max-width: 20rem;
+
+  padding: 2.5rem;
+  padding-bottom: 7rem;
+
+  border-radius: 2rem;
+}
+.info-user__image-box {
+  width: 6rem;
+
+  margin-bottom: 4rem;
+}
+.info-user__image {
+  display: block;
+  width: 100%;
+
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+.info-user__text {
+  font-weight: 300;
+}
+.info-user__name {
+  font-weight: 300;
+  font-size: 3.2rem;
+}
+/*time change block*/
+.time-change {
+  padding: 2.5rem;
+}
+.time-change__list {
+  list-style: none;
+}
+.time-change__option {
+  color: var(--color-pale-blue);
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.time-change__option--margin {
+  margin-bottom: 1.2rem;
+}
+.time-change__change-time {
+  padding-right: 2rem;
+
+  color: inherit;
+
+  background-color: transparent;
+  border: none;
+
+  transition-duration: 0.5s;
+}
+.time-change__change-time:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+/*time tracking section*/
+.tracking-dashboard__tracking-box {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+
+  flex-basis: 65rem;
+  flex-wrap: wrap;
+}
+/*time tracking block*/
+.time-tracking {
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: top -0.8rem right 1.5rem;
+
+  width: 20rem;
+
+  padding-top: 3rem;
+
+  border-radius: 2rem;
+}
+.time-tracking:nth-child(1) {
+  background-color: var(--color-orange);
+  background-image: url(../images/icon-work.svg);
+}
+.time-tracking:nth-child(2) {
+  background-color: var(--color-light-blue);
+  background-image: url(../images/icon-play.svg);
+  background-position: top -0.4rem right 2rem;
+}
+.time-tracking:nth-child(3) {
+  background-color: var(--color-red);
+  background-image: url(../images/icon-study.svg);
+}
+.time-tracking:nth-child(4) {
+  background-color: var(--color-green);
+  background-image: url(../images/icon-exercise.svg);
+  background-position: top -0.2rem right 2rem;
+}
+.time-tracking:nth-child(5) {
+  background-color: var(--color-violet);
+  background-image: url(../images/icon-social.svg);
+  background-position: top 0rem right 2rem;
+}
+.time-tracking:nth-child(6) {
+  background-color: var(--color-yellow);
+  background-image: url(../images/icon-self-care.svg);
+}
+.time-tracking__content {
+  background-color: var(--color-dark-blue);
+  height: 100%;
+
+  padding: 2.5rem;
+
+  border-radius: 2rem;
+}
+.time-tracking__content:hover {
+  background-color: var(--color-dark-blue-opacity);
+}
+/*cell theme block*/
+.cell-theme {
+  margin-bottom: 2.2rem;
+}
+.cell-theme__text {
+  display: inline;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.cell-theme__change {
+  background-color: transparent;
+  float: right;
+
+  padding: 0.5rem;
+
+  border: none;
+
+  transition-duration: 0.5s;
+}
+.cell-theme__image {
+  display: block;
+  width: 1.5rem;
+}
+.cell-theme__change:hover {
+  transform: scale(1.2);
+}
+.time-tracking__time {
+  font-size: 4.2rem;
+  font-weight: 300;
+
+  margin-bottom: 1rem;
+}
+.time-tracking__text {
+  color: var(--color-pale-blue);
+  font-size: 1.2rem;
 }
