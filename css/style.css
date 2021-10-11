@@ -38,9 +38,7 @@ body {
 }
 /*main page*/
 .main-page {
-  position: relative;
-  top: 50vh;
-  transform: translateY(-50%);
+  padding: 5rem 0;
 }
 /*component*/
 .tracking-dashboard {
@@ -127,20 +125,18 @@ body {
 }
 /*time tracking section*/
 .tracking-dashboard__tracking-box {
-  display: flex;
-  align-content: center;
-  justify-content: flex-start;
+  max-width: 100rem;
 
-  flex-basis: 100rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  grid-gap: 3rem;
 }
 /*time tracking block*/
 .time-tracking {
   background-repeat: no-repeat;
   background-size: 6.5rem;
   background-position: top -0.8rem right 1.5rem;
-
-  width: 30rem;
 
   padding-top: 4rem;
 
@@ -172,13 +168,6 @@ body {
 .time-tracking:nth-child(6) {
   background-color: var(--color-yellow);
   background-image: url(../images/icon-self-care.svg);
-}
-.time-tracking--margin-row {
-  margin-bottom: 3rem;
-}
-.time-tracking--margin-column {
-  margin-left: 3rem;
-  margin-right: 3rem;
 }
 .time-tracking__content {
   background-color: var(--color-dark-blue);
@@ -255,6 +244,16 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+@media screen and (min-width: 1500px) {
+  /*main page*/
+  .main-page {
+    padding: 0;
+
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
   }
 }
 @media screen and (max-width: 1300px) {
@@ -335,12 +334,8 @@ body {
   }
   /*time tracking section*/
   .tracking-dashboard__tracking-box {
-    align-content: flex-start;
-    justify-content: none;
-    flex-direction: column;
-
-    flex-basis: none;
-    flex-wrap: nowrap;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
   /*time tracking block*/
   .time-tracking--margin-row {
