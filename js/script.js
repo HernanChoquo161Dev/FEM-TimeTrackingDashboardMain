@@ -1,4 +1,4 @@
-fetch("./public/data.json"    ,{
+fetch("./public/data.json",{
         headers : { 
         'ContentS-Type': 'application/json',
         'Accept': 'application/json'
@@ -22,7 +22,7 @@ fetch("./public/data.json"    ,{
   var optionActive = 1;
 
   function animationChangeDashboard(){
-    const textHidden = document.querySelectorAll(".time-tracking__time");
+    let textHidden = document.querySelectorAll(".time-tracking__time");
 
     for(d = 0; d < textHidden.length; d++){
         textHidden[d].classList.toggle("time-tracking__time--animation");
@@ -30,7 +30,7 @@ fetch("./public/data.json"    ,{
   }
 
   function changeDataDashboard(changeOption){
-    fetch("./public/data.json"    ,{
+    fetch("./public/data.json",{
         headers : { 
         'ContentS-Type': 'application/json',
         'Accept': 'application/json'
@@ -41,11 +41,7 @@ fetch("./public/data.json"    ,{
         const timeTracking = document.querySelectorAll(".time-tracking__count-time");
         const trackingSummary = document.querySelectorAll(".time-tracking__text-count");
 
-        const textHidden2 = document.querySelectorAll(".time-tracking__time");
-  
         for(c = 0; c < timeTracking.length; c++){
-            textHidden2[c].classList.toggle("time-tracking__time--animation");
-
             if(changeOption == 0){
                 timeTracking[c].textContent = data[c].timeframes.daily.current;
                 trackingSummary[c].textContent = data[c].timeframes.daily.previous;
@@ -66,15 +62,20 @@ fetch("./public/data.json"    ,{
   function activeOptionTime(index){
     changeTimeList[index].addEventListener('click', function (event) {
 
-        animationChangeDashboard();
+        if(optionActive != index){
+            animationChangeDashboard();
 
-        changeDataDashboard(index);
+            changeDataDashboard(index);
 
-        const optionTimeList = document.querySelectorAll(".time-change__option");
-        optionTimeList[optionActive].style.color = "hsl(236, 100%, 87%)";
-        optionTimeList[index].style.color = "#ffffff";
+            const optionTimeList = document.querySelectorAll(".time-change__option");
+            optionTimeList[optionActive].style.color = "hsl(236, 100%, 87%)";
+            optionTimeList[index].style.color = "#ffffff";
+    
+            optionActive = index;
 
-        optionActive = index;
+            
+            setTimeout(animationChangeDashboard, 1000);
+        }
     });
   }
 
