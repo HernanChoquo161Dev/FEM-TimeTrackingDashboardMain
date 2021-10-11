@@ -397,6 +397,7 @@ body {
     width: 3rem;
   }
 }
+/*Change mobile*/
 @media screen and (max-width: 670px) {
   html {
     font-size: 55%;
