@@ -39,6 +39,10 @@ body {
 /*main page*/
 .main-page {
   padding: 5rem 1rem;
+
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
 }
 /*component*/
 .tracking-dashboard {
@@ -248,14 +252,14 @@ body {
     opacity: 1;
   }
 }
-@media screen and (min-width: 1500px) {
-  /*main page*/
-  .main-page {
-    padding: 0;
-
-    position: relative;
-    top: 50vh;
-    transform: translateY(-50%);
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 52%;
+  }
+  /*time tracking section*/
+  .tracking-dashboard__tracking-box {
+    flex: 0 1 90rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 @media screen and (max-width: 1300px) {
@@ -266,9 +270,6 @@ body {
 @media screen and (max-width: 1024px) {
   html {
     font-size: 44.5%;
-  }
-  .main-page {
-    padding: 5rem 2rem;
   }
   /*time tracking section*/
   .tracking-dashboard__tracking-box {
@@ -282,6 +283,7 @@ body {
   }
   /*main page*/
   .main-page {
+    padding: 0;
     top: 0;
     transform: translateY(0);
   }
@@ -306,7 +308,7 @@ body {
     padding: 6rem 5rem;
   }
   .info-user__image-box {
-    width: 14rem;
+    width: 12rem;
     height: 100%;
 
     display: inline-block;
@@ -325,7 +327,7 @@ body {
     font-size: 2.8rem;
   }
   .info-user__name {
-    font-size: 4.8rem;
+    font-size: 4.5rem;
   }
   /*time change block*/
   .time-change {
@@ -340,7 +342,7 @@ body {
     margin-bottom: 0;
   }
   .time-change__change-time {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   /*time tracking section*/
   .tracking-dashboard__tracking-box {
@@ -374,7 +376,7 @@ body {
   .time-tracking__time {
     display: inline-block;
 
-    font-size: 6.8rem;
+    font-size: 6rem;
 
     margin: 0;
   }
@@ -395,8 +397,7 @@ body {
     margin-bottom: 1rem;
   }
   .cell-theme__text {
-    font-size: 3.2rem;
-    font-weight: 400;
+    font-size: 3rem;
   }
   .cell-theme__image {
     width: 3rem;
@@ -413,6 +414,11 @@ body {
     font-size: 53%;
   }
 }
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 49%;
+  }
+}
 @media screen and (max-width: 570px) {
   html {
     font-size: 47%;
@@ -425,7 +431,12 @@ body {
 }
 @media screen and (max-width: 426px) {
   html {
-    font-size: 35%;
+    font-size: 36%;
+  }
+}
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 34%;
   }
 }
 @media screen and (max-width: 376px) {
@@ -440,11 +451,11 @@ body {
 }
 @media screen and (max-width: 320px) {
   html {
-    font-size: 27%;
+    font-size: 26%;
   }
 }
 @media screen and (max-width: 280px) {
   html {
-    font-size: 23%;
+    font-size: 22%;
   }
 }
