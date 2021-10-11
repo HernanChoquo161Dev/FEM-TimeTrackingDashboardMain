@@ -1,4 +1,9 @@
-fetch("../json/data.json")
+fetch("./public/data.json"    ,{
+        headers : { 
+        'ContentS-Type': 'application/json',
+        'Accept': 'application/json'
+        }
+  })
   .then(response => response.json())
   .then(data => {
     const tittleTracking = document.querySelectorAll(".cell-theme__text");
@@ -25,7 +30,12 @@ fetch("../json/data.json")
   }
 
   function changeDataDashboard(changeOption){
-    fetch("../json/data.json")
+    fetch("./public/data.json"    ,{
+        headers : { 
+        'ContentS-Type': 'application/json',
+        'Accept': 'application/json'
+        }
+    })
     .then(response => response.json())
     .then(data => {
         const timeTracking = document.querySelectorAll(".time-tracking__count-time");
