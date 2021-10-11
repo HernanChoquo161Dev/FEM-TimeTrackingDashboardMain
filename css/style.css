@@ -38,7 +38,7 @@ body {
 }
 /*main page*/
 .main-page {
-  padding: 5rem 0;
+  padding: 5rem 1rem;
 }
 /*component*/
 .tracking-dashboard {
@@ -49,9 +49,11 @@ body {
 .tracking-dashboard__user-box {
   background-color: var(--color-dark-blue);
 
+  max-width: 160rem;
+
   display: flex;
   flex-direction: column;
-  flex: 0 0 30rem;
+  flex: 0 1 30rem;
 
   margin-right: 3rem;
 
@@ -125,7 +127,7 @@ body {
 }
 /*time tracking section*/
 .tracking-dashboard__tracking-box {
-  max-width: 100rem;
+  flex: 0 1 100rem;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -264,6 +266,14 @@ body {
 @media screen and (max-width: 1024px) {
   html {
     font-size: 44.5%;
+  }
+  .main-page {
+    padding: 5rem 2rem;
+  }
+  /*time tracking section*/
+  .tracking-dashboard__tracking-box {
+    flex: 0 1 92rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 @media screen and (max-width: 768px) {
