@@ -70,6 +70,7 @@ fetch("./public/data.json",{
             const optionTimeList = document.querySelectorAll(".time-change__option");
             optionTimeList[optionActive].style.color = "hsl(236, 100%, 87%)";
             optionTimeList[index].style.color = "#ffffff";
+            aria-live
     
             optionActive = index;
 

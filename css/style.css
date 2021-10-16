@@ -123,6 +123,8 @@ body {
   background-color: transparent;
   border: none;
 
+  cursor: pointer;
+
   transition-duration: 0.5s;
 }
 .time-change__change-time:hover {
